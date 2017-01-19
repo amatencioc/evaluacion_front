@@ -104,9 +104,11 @@
               <h3 class="box-title">Ordenador de serie</h3>
             </div>
             <div class="box-body">
-				<div class="control-group col-xs-6">
-                    <label>Ingresar conjunto de n&uacute;meros enteros:</label>
-                    <input type="text" class="form-control input-sm" id="txtNumeros" onkeypress="return ValidNum(event);"/>
+				<div class="control-group col-xs-12">
+                    <label>Ingresar conjunto de n&uacute;meros enteros:</label><br/>
+					Nota: Ingresar d&iacute;gito por d&iacute;gito o un conjunto de n&uacute;meros separados por coma (",") <br/>
+					Ejm: 6 &oacute; 9,8,7,...
+                    <input type="text" class="form-control input-sm" value="8,5,2,4,7,1,3,6,9,5,4,7,1" id="txtNumeros" onkeypress="return ValidNum(event);"/>
                 </div>
 				<div class="control-group col-xs-12">
                     <input id="btnImprimir" type="button" value="Imprimir n&uacute;mero(s) ingresado(s)" onclick="imprimirNumeros()">					
@@ -225,8 +227,8 @@
 	}
 	function burbuja(){
 		//recorreremos todos los elementos hasta n-1
-		if(i<arreglo_final.length){	 
-			//recorreremos todos los elementos hasta n-i, tomar en cuenta los ultimos no tiene caso ya que ya estan acomodados.
+		if(i<arreglo_final.length){
+			//recorreremos todos los elementos hasta n-i, tomar en cuenta los ultimos no tiene caso ya que ya estan acomodados.			
 			if(j<(arreglo_final.length-i)){	 
 				//comparamos
 				if(arreglo_final[j]>arreglo_final[j+1]){
