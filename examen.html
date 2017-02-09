@@ -120,6 +120,7 @@
 				<div class="control-group col-xs-12">
 					<br/>
                     <input id="btnOrdenar" type="button" value="Ordenar n&uacute;mero(s) - ascendente" onclick="ordenarNumeros()">
+					<label id="lbltextoOrdenar"></label>
                 </div>
 				<div class="control-group col-xs-12">
 					<ul id="numeros" class="list-unstyled" style="margin-left: 0px; display: inline-flex; list-style-type: none;">					
@@ -166,7 +167,7 @@
 	var filtro = [];
 	var iteracion; //sirve para guardar el evento de tiempo y poder pararlo	
 	var nav4 = window.Event ? true : false; 
-	$("#btnOrdenar").prop("disabled",true);
+	$("#btnOrdenar").prop("disabled",true);	
 	function ValidNum(evt){  
 		// NOTE: Backspace = 8, Enter = 13, '0' = 48, '9' = 57  
 		var key = nav4 ? evt.which : evt.keyCode;  
@@ -174,6 +175,7 @@
 	} 
 	function imprimirNumeros(){
 		$("#btnOrdenar").prop("disabled",false);
+		$("#lbltextoOrdenar").html("<--- Click para empezar con la animaci&oacute;n de ordenar los n&uacute;meros.");
 		var str = $("#txtNumeros").val();
 		if(str != ""){
 			var numero = str.split(",");
