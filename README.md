@@ -12,5 +12,3 @@ Funcionamiento:
 Para la solución se utilizó:
    - bootstrap 3
    - Jquery 2.2.3
-
-Nota: Se utilizó bootstrap para hacer un mejor diseño de la página y animación del resultado.
